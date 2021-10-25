@@ -79,13 +79,13 @@ class Collection<T extends string | number | boolean> {
 
 // const strings = new Collection<string>(['I', 'am', 'strings'])
 const strings = new Collection(['I', 'am', 'strings'])
-strings.add('!')
+// strings.add('!')
 strings.remove('am')
 console.log(strings.items)
 
 // const numbers = new Collection<number>([1, 2, 3])
 const numbers = new Collection([1, 2, 3])
-numbers.add(4)
+// numbers.add(4)
 numbers.remove(2)
 console.log(numbers.items)
 
@@ -113,3 +113,12 @@ function createAndValidateCar(model: string, year: number): Car {
   return car as Car
 }
 
+// ============
+const cars: Readonly<Array<string>> = ['Ford, Audi']
+// cars.shift()
+
+const ford: Readonly<Car> = {
+  model: 'Ford',
+  year: 2020
+}
+// ford.model = 'Ferrari'

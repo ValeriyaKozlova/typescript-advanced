@@ -43,14 +43,24 @@ class Collection {
     }
 }
 const strings = new Collection(['I', 'am', 'strings']);
-strings.add('!');
 strings.remove('am');
 console.log(strings.items);
 const numbers = new Collection([1, 2, 3]);
-numbers.add(4);
 numbers.remove(2);
 console.log(numbers.items);
-const objs = new Collection([{ a: 1 }, { b: 2 }]);
-objs.remove({ b: 2 });
-console.log(objs.items);
+function createAndValidateCar(model, year) {
+    const car = {};
+    if (model.length > 3) {
+        car.model = model;
+    }
+    if (year > 2000) {
+        car.year = year;
+    }
+    return car;
+}
+const cars = ['Ford, Audi'];
+const ford = {
+    model: 'Ford',
+    year: 2020
+};
 //# sourceMappingURL=generic.js.map
